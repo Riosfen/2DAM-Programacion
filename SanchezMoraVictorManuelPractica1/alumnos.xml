@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<alumnos>
+<alumno numero="3">
+<matriculas>
+	<matricula>
+		<asignatura > PROGRAMACION </asignatura>
+		<nota >  8 </nota>
+	</matricula>
+	<matricula>
+		<asignatura > BD </asignatura>
+		<nota >  6 </nota>
+	</matricula>
+	<matricula>
+		<asignatura > ENTORNOS </asignatura>
+		<nota >  6 </nota>
+	</matricula>
+</matriculas>
+</alumno>
+<alumno numero="4">
+<matriculas>
+<matricula>
+<asignatura > PROGRAMACION </asignatura>
+<nota >  8 </nota>
+</matricula>
+<matricula>
+<asignatura > BD </asignatura>
+<nota >  6 </nota>
+</matricula>
+<matricula>
+<asignatura > ENTORNOS </asignatura>
+<nota >  6 </nota>
+</matricula>
+</matriculas>
+</alumno>
+
+<alumno numero="1">
+<matriculas>
+<matricula>
+<asignatura > LENGUAJES DE MARCA </asignatura>
+<nota >  4 </nota>
+</matricula>
+<matricula>
+<asignatura > BD </asignatura>
+<nota >  6 </nota>
+</matricula>
+<matricula>
+<asignatura > ENTORNOS </asignatura>
+<nota >  5 </nota>
+</matricula>
+</matriculas>
+</alumno>
+
+<alumno numero="2">
+<matriculas>
+<matricula>
+<asignatura > BD </asignatura>
+<nota >  9 </nota>
+</matricula>
+<matricula>
+<asignatura > ENTORNOS </asignatura>
+<nota >  4 </nota>
+</matricula>
+</matriculas>
+</alumno>
+
+<alumno numero="5">
+<matriculas>
+<matricula>
+<asignatura > LENGUAJES DE MARCA </asignatura>
+<nota >  2 </nota>
+</matricula>
+<matricula>
+<asignatura > BD </asignatura>
+<nota >  4 </nota>
+</matricula>
+<matricula>
+<asignatura > ENTORNOS </asignatura>
+<nota >  3 </nota>
+</matricula>
+<matricula>
+<asignatura >PROGRAMACION </asignatura>
+<nota >  8 </nota>
+</matricula>
+</matriculas>
+</alumno>
+</alumnos>
