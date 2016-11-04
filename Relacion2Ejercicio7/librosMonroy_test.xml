@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Libros>
+  <libro>
+    <isbn>1</isbn>
+    <titulo>el duende magico</titulo>
+    <autor>felipe</autor>
+    <numero_ejemplares>0</numero_ejemplares>
+  </libro>
+  <libro>
+    <isbn>2</isbn>
+    <titulo>Caperucita Roja</titulo>
+    <autor>Juan</autor>
+    <numero_ejemplares>0</numero_ejemplares>
+  </libro>
+  <libro>
+    <isbn>3</isbn>
+    <titulo>Los siete enanitos</titulo>
+    <autor> Juan carlos</autor>
+    <numero_ejemplares>0</numero_ejemplares>
+  </libro>
+  <libro>
+    <isbn>4</isbn>
+    <titulo>Harry potter</titulo>
+    <autor>Manuela</autor>
+    <numero_ejemplares>0</numero_ejemplares>
+  </libro>
+  <libro>
+    <isbn>5</isbn>
+    <titulo>Blancanieves</titulo>
+    <autor>Francisco</autor>
+    <numero_ejemplares>0</numero_ejemplares>
+  </libro>
+  <libro>
+    <isbn>6</isbn>
+    <titulo>el seños de los anillos</titulo>
+    <autor>Patricia</autor>
+    <numero_ejemplares>0</numero_ejemplares>
+  </libro>
+</Libros>
