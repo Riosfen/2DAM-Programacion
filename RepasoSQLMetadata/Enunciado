@@ -1,0 +1,2 @@
+Sobre la BD SQLITE del ejercicio1 (BDEjercicio1.db) realizar un programa que 
+solicite el nombre de una tabla y borre todos los campos que sean de tipo TINYINT.
