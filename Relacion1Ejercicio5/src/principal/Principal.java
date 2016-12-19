@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 
 public class Principal {
 
-	public static Scanner teclado = new Scanner(System.in);
+public static Scanner teclado = new Scanner(System.in);
 	
 	public static void main(String[] args) {
 
@@ -23,13 +23,17 @@ public class Principal {
 			BufferedWriter filtro = new BufferedWriter(flujo);
 			
 			StringTokenizer st = new StringTokenizer(palabras, " ");
+			StringBuilder resultado = new StringBuilder();
 			
 			while(st.hasMoreTokens()){
 				
-				StringBuilder palabraInvertida = new StringBuilder(st.nextToken()).reverse();
-				filtro.write(palabraInvertida.toString() + "\n");
+				//StringBuilder palabraInvertida = new StringBuilder(st.nextToken()).reverse();
+				resultado.append(st.nextToken() + "\n");
 				
 			}
+			
+
+			filtro.write(resultado.reverse().toString());
 			
 			filtro.close();
 			
@@ -37,5 +41,5 @@ public class Principal {
 			e.printStackTrace();
 		}
 	}
-
+	
 }
