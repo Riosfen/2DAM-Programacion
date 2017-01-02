@@ -35,8 +35,7 @@ public class Principal {
 				int nAlquilada = Integer.parseInt(st.nextToken());
 				
 				filtro2.writeInt(codigo);
-				String b = String.format("%1$-30s",titulo);
-				filtro2.write(b.getBytes());
+				filtro2.write(String.format("%1$-30s",titulo).getBytes());
 				filtro2.writeInt(nAlquilada);
 				
 				linea = filtro.readLine();
