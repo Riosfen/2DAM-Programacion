@@ -1,10 +1,12 @@
 package principal;
 
+import java.io.BufferedWriter;
 import java.io.DataInputStream;
 import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Principal {
@@ -14,6 +16,10 @@ public class Principal {
 		boolean terminado = false;
 		
 		try {
+
+			File fichero2 = new File("mejores-peliculas.txt");
+			FileWriter flujo2 = new FileWriter(fichero2);
+			BufferedWriter filtro2 = new BufferedWriter(flujo2);
 			
 			File fichero = new File("peliculas.bin");
 			FileInputStream flujo = new FileInputStream(fichero);
@@ -46,9 +52,12 @@ public class Principal {
 			
 			for (int i = 0; i < vPeli.length; i++) {
 				
-				System.out.println(vPeli[i]);
+				filtro2.write(vPeli[i].toString() + "\n");
 				
 			}
+			
+			filtro2.close();
+			flujo2.close();
 			
 			filtro.close();
 			flujo.close();
