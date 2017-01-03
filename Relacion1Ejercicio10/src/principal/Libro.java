@@ -16,14 +16,19 @@ public class Libro implements Serializable {
 		setAutor(autor);
 		setEjemplares(ejemplares);
 		
+	}
+	
+	public void fusionarLibros(Libro otro){
+		
+		this.ejemplares += otro.getEjemplares();
 		
 	}
 	
 	public void setAutor(String autor) {
-		this.autor = String.format("%1$-10s", autor);
+		this.autor = String.format("%1$-30s", autor);
 	}
 	public void setCodigo(String codigo) {
-		this.codigo = String.format("%1$-30s", codigo);
+		this.codigo = String.format("%1$-10s", codigo);
 	}
 	public void setEjemplares(int ejemplares) {
 		this.ejemplares = ejemplares;
