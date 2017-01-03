@@ -1,0 +1,6 @@
+1111111111	Una hora más                  	Autor 1                       	5
+2222222222	El tiempo corre               	Autor 2                       	3
+4444444444	Al filo del mañana            	Autor 4                       	36
+5555555555	Ya sé quién eres              	Autor 5                       	10
+6666666666	El mundo de Eli               	Autor 6                       	12
+8888888888	Esto es programación          	Autor 8                       	35
