@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libros>
+  <libro ISBN="1111111111">
+    <autor>Autor 1</autor>
+    <titulo>Una hora más</titulo>
+    <ejemplares>5</ejemplares>
+  </libro>
+  <libro ISBN="4444444444">
+    <autor>Autor 4</autor>
+    <titulo>Al filo del mañana</titulo>
+    <ejemplares>12</ejemplares>
+  </libro>
+  <libro ISBN="5555555555">
+    <autor>Autor 5</autor>
+    <titulo>Ya sé quién eres</titulo>
+    <ejemplares>9</ejemplares>
+  </libro>
+  <libro ISBN="8888888888">
+    <autor>Autor 8</autor>
+    <titulo>Esto es programación</titulo>
+    <ejemplares>35</ejemplares>
+  </libro>
+</libros>

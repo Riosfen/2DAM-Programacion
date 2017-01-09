@@ -1,15 +1,20 @@
 package principal;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Result;
 import javax.xml.transform.Source;
 import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
@@ -17,83 +22,86 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 public class Principal {
 
-	private static Scanner teclado = new Scanner(System.in);
-
+	public static Scanner teclado = new Scanner(System.in);
+	
 	public static void main(String[] args) {
 
-		Node raiz, n;
-		Element ele;
-
 		try {
-			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-			DocumentBuilder builder = factory.newDocumentBuilder();
-			Document arbol = builder.parse(new File("librosMonroy.xml"));
-
-			raiz = arbol.getFirstChild();
-			NodeList listaNodos = raiz.getChildNodes();
 			
-			System.out.println("Lista de Libros:\n");
-
-			for (int i = 0; i < listaNodos.getLength(); i++) {
-				n = listaNodos.item(i);
-				if (n.getNodeType() == Node.ELEMENT_NODE && n.getNodeName().equals("libro")) {
-
-					ele = (Element) n;
-
-					// Mostrar el nodo
-					System.out.println("ISBN:" + getNodo("isbn", ele) + " Titulo:" + getNodo("titulo", ele));
-					
-				}
-			}
+			System.out.println("Introduce el ISBN a borrar: ");
+			String borrarIsbn = teclado.nextLine();
+		
+			DocumentBuilderFactory factoria = DocumentBuilderFactory.newInstance();
+			DocumentBuilder builder = factoria.newDocumentBuilder();
+			Document doc = builder.parse(new File("LibrosMonroy.xml"));
+		
+			Node raiz = doc.getDocumentElement();
+			NodeList listaNodos = doc.getElementsByTagName("libro");
 			
-			System.out.println("\nIndica el ISBN del libro que quieras borrar: ");
-			String opcion = teclado.nextLine();
+			boolean borrado = false;
+			int contador = 0;
 			
-			for (int i = 0; i < listaNodos.getLength(); i++) {
-				n = listaNodos.item(i);
+			while (contador < listaNodos.getLength() && !borrado){
 				
-				if (n.getNodeName().equals("libro")){
-				ele = (Element) n;
-
-				// AÃ±ado un nuevo atributo tipo con valor "S" a todos los
+				Node libro = listaNodos.item(contador);
+				
+				if (libro.getNodeType() == Node.ELEMENT_NODE){
 					
-					if (ele.getFirstChild().getTextContent().equals(opcion)){
-
-						raiz.removeChild(n);
+					Element elemento = (Element) libro;
+					String nodoIsbn = elemento.getAttribute("ISBN");
+					
+					if (nodoIsbn.equals(borrarIsbn)){
+						
+						System.out.println("Se ha borrado el libro con ISBN: " + nodoIsbn);
+						
+						raiz.removeChild(elemento);
+						borrado = true;
 						
 					}
+					
 				}
+				
+				contador++;
+				
 			}
-
-			// Pasar el arbol dom a un fichero xml llamado librosMonroy.xml
-
-			Source source = new DOMSource(arbol);
-			Result result = new StreamResult("librosMonroy_test.xml");
-			Transformer transformer = TransformerFactory.newInstance().newTransformer();
-			// formatear xml
-			transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
-			transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-			// fin de formateo
-			transformer.transform(source, result);
-
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			
+			if (borrado){
+				
+				Source source = new DOMSource(doc);
+				Result result = new StreamResult("librosMonroy-test.xml");
+				Transformer transformer = TransformerFactory.newInstance().newTransformer();
+				transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+				transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+				transformer.transform(source, result);
+				
+			}else {
+				System.out.println("No se encontró el libro con ISBN: " + borrarIsbn);
+			}
+			
+		} catch (ParserConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SAXException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (TransformerConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (TransformerFactoryConfigurationError e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (TransformerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-
-	}
-
-	private static String getNodo(String etiqueta, Element ele) throws Exception {
-
-		NodeList listaDeHijosDeEtiqueta = ele.getElementsByTagName(etiqueta); 
-		if (listaDeHijosDeEtiqueta.getLength() == 0)
-			throw new Exception("No existe el elemento con etiqueta " + etiqueta);
-
-		Node nodo = listaDeHijosDeEtiqueta.item(0).getFirstChild(); 
-
-		return nodo.getNodeValue(); 
+		
 	}
 
 }
