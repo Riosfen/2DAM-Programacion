@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<aumentos>
+	<empleado>
+		<codigo>1</codigo>
+		<porcentajeAumento>50</porcentajeAumento>
+	</empleado>
+	<empleado>
+		<codigo>3</codigo>
+		<porcentajeAumento>50</porcentajeAumento>
+	</empleado>
+	<empleado>
+		<codigo>5</codigo>
+		<porcentajeAumento>50</porcentajeAumento>
+	</empleado>
+	<empleado>
+		<codigo>6</codigo>
+		<porcentajeAumento>50</porcentajeAumento>
+	</empleado>
+</aumentos>
