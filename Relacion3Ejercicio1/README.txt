@@ -1,0 +1,1 @@
+Para realizar este ejercicio se ha utilizado un .jar (sqlite-jdbc-3.7.2.jar) para ser exactos.
