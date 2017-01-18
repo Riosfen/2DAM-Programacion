@@ -1,12 +1,15 @@
 package principal;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -22,6 +25,8 @@ public class Cliente implements Serializable {
 	private String nombre;
 	@Column(name = "DNI")
 	private String dni;
+	@OneToMany(mappedBy="Cliente", cascade=CascadeType.ALL)
+	private ArrayList<Compra> compras;
 	
 	public Cliente (String nombre, String dni){
 		

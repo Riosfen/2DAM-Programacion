@@ -5,6 +5,9 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -12,10 +15,15 @@ import javax.persistence.Table;
 @SuppressWarnings("serial")
 public class Compra implements Serializable{
 
-	@Column(name="IDARTICULO")
-	private int idArticulo;
-	@Column(name="IDCLIENTE")
-	private int idCliente;
+	@Id
+	@Column(name="ID")
+	private int id;
+	@ManyToOne
+	@JoinColumn(name="IDARTICULO")
+	private Articulo idArticulo;
+	@ManyToOne
+	@JoinColumn(name="IDCLIENTE")
+	private Cliente idCliente;
 	@Column(name="FECHA")
 	private Date fecha;
 	
