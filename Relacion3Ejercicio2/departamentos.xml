@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<departamentos>
+  <departamento>
+    <codigo>10</codigo>
+    <nombre>CONTABILIDAD</nombre>
+    <localidad>SEVILLA</localidad>
+  </departamento>
+  <departamento>
+    <codigo>20</codigo>
+    <nombre>INVESTIGACIÓN</nombre>
+    <localidad>MADRID</localidad>
+  </departamento>
+  <departamento>
+    <codigo>30</codigo>
+    <nombre>VENTAS</nombre>
+    <localidad>BARCELONA</localidad>
+  </departamento>
+  <departamento>
+    <codigo>40</codigo>
+    <nombre>PRODUCCIÓN</nombre>
+    <localidad>BILBAO</localidad>
+  </departamento>
+</departamentos>
