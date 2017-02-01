@@ -1,0 +1,14 @@
+package principal;
+
+public enum TipoPelicula {
+	DRAMA,
+	COMEDIA,
+	ACCION,
+	AVENTURA,
+	TERROR,
+	CIENCIA_FICCION,
+	ROMANTICO,
+	MUSICAL,
+	FANTASIA,
+	SUSPENSE
+}

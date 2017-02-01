@@ -18,7 +18,7 @@ public class Principal {
 		ServiceRegistry servicio = new ServiceRegistryBuilder().applySettings(configuracion.getProperties()).buildServiceRegistry();
 		factoria = configuracion.buildSessionFactory(servicio);
 		
-		Articulo art = new Articulo("Samsung galaxy note 2", 250);
+		Pelicula art = null;
 		
 		Session sesion = factoria.openSession();
 		sesion.beginTransaction(); // TODO error no se ha podido abrir la conexion
