@@ -23,7 +23,7 @@ create table maillot(
   codigo varchar(3) primary key,
   tipo   varchar(30),
   color varchar(20),
-  premio number(10));
+  premio int);
 
 
 create table llevar(
