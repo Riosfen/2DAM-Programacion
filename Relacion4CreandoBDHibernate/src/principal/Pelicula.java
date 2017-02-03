@@ -27,17 +27,22 @@ public class Pelicula implements Serializable {
 	@Column(name = "ID_PELICULA")
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
+	
 	@Column(name = "NOMBRE")
 	private String nombre;
+	
 	@Enumerated(EnumType.ORDINAL)
 	private TipoPelicula tipoPelicula;
+	
 	@Column(name = "FECHA_EDICION")
 	private Date fechaEdicion;
+	
 	@Column(name = "DESCRIPCION")
 	private String descripcion;
+	
 	@ManyToOne
-	@JoinColumn(name = "ID_DIRECTOR")
 	private Director director;
+	
 	
 	public Pelicula(){}
 	
