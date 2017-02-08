@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
@@ -16,6 +18,7 @@ public class Director implements Serializable {
 
 	@Id
 	@Column(name="ID_DIRECTOR")
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	@Column(name="NOMBRE")
 	private String nombre;
