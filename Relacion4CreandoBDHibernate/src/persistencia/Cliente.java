@@ -1,4 +1,4 @@
-package principal;
+package persistencia;
 
 import java.io.Serializable;
 import java.util.ArrayList;

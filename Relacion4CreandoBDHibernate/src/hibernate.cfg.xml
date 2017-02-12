@@ -9,9 +9,10 @@
       <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
      <property name="hibernate.show_sql">true</property>
 
-     <mapping class="principal.Articulo"/>
-     <mapping class="principal.Cliente"/>
-     <mapping class="principal.Compra"/>
+     <mapping class="hibernateClass.Alquila"/>
+     <mapping class="hibernateClass.Cliente"/>
+     <mapping class="hibernateClass.Director"/>
+     <mapping class="hibernateClass.Pelicula"/>
 
    </session-factory>
  </hibernate-configuration>

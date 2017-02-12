@@ -1,4 +1,4 @@
-package principal;
+package modelo;
 
 public enum TipoPelicula {
 	DRAMA,

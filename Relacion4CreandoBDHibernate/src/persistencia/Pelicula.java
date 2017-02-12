@@ -1,4 +1,4 @@
-package principal;
+package persistencia;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -17,6 +17,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.Cascade;
+
+import modelo.TipoPelicula;
 
 @Entity
 @Table(name = "Pelicula")
